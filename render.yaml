@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: business-blueprint-frontend
+    env: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
