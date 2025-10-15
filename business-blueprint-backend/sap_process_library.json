@@ -1,0 +1,77 @@
+{
+  "Procure to Pay (MM)": {
+    "description": "Create purchase requisition, convert to PO, receive goods, verify invoice, execute payment",
+    "steps": [
+      "Create Purchase Requisition",
+      "Approve Requisition",
+      "Create Purchase Order",
+      "Send PO to Vendor",
+      "Receive Goods",
+      "Enter Invoice",
+      "Perform 3-Way Match",
+      "Post Invoice",
+      "Execute Payment Run"
+    ],
+    "roles": ["Requester", "Buyer", "Warehouse", "Accounts Payable"],
+    "keywords": ["3-way", "3-way match", "purchase requisition", "PR", "PO", "invoice", "vendor", "Ariba sync", "PO aging"]
+  },
+  "Order to Cash (SD)": {
+    "description": "Create sales order, check availability, deliver goods, invoice customer, receive payment",
+    "steps": [
+      "Create Sales Order",
+      "Check Availability",
+      "Create Delivery",
+      "Post Goods Issue",
+      "Create Billing Document",
+      "Receive Payment"
+    ],
+    "roles": ["Sales", "Warehouse", "Billing"],
+    "keywords": ["sales order", "delivery", "billing", "invoice", "customer payment"]
+  },
+  "Accounts Payable (FI)": {
+    "description": "Post vendor invoices, manage open items, execute payment run",
+    "steps": [
+      "Enter Vendor Invoice",
+      "Post to FI",
+      "Execute Payment Run",
+      "Clear Open Items"
+    ],
+    "roles": ["Accounts Payable"],
+    "keywords": ["vendor invoice", "payment run", "FI posting", "open items"]
+  },
+  "Production Planning (PP)": {
+    "description": "Plan materials, create production orders, execute manufacturing",
+    "steps": [
+      "Create Planned Order",
+      "Convert to Production Order",
+      "Issue Materials",
+      "Confirm Production",
+      "Post Goods Receipt"
+    ],
+    "roles": ["Planner", "Production Supervisor"],
+    "keywords": ["production order", "planned order", "manufacturing", "material planning"]
+  },
+  "Quality Management (QM)": {
+    "description": "Perform quality inspection, record results, manage defects",
+    "steps": [
+      "Create Inspection Lot",
+      "Record Inspection Results",
+      "Post Usage Decision",
+      "Log Defects"
+    ],
+    "roles": ["Quality Inspector"],
+    "keywords": ["inspection", "quality check", "defect", "inspection lot"]
+  },
+  "Plant Maintenance (PM)": {
+    "description": "Create maintenance requests, plan and execute maintenance orders",
+    "steps": [
+      "Create Maintenance Notification",
+      "Convert to Maintenance Order",
+      "Plan Materials and Labor",
+      "Execute Maintenance",
+      "Close Order"
+    ],
+    "roles": ["Maintenance Planner", "Technician"],
+    "keywords": ["maintenance order", "repair request", "equipment breakdown", "PM notification"]
+  }
+}

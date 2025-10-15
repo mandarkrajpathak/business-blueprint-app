@@ -1,0 +1,5 @@
+command for backend run: D:\MANDARK\Learning\AI\Projects\business-blueprint-app\sap-blueprint-backend> uvicorn main:app --reload
+command for frontend run: D:\MANDARK\Learning\AI\Projects\business-blueprint-app> npm start 
+
+
+Set-ExecutionPolicy RemoteSigned

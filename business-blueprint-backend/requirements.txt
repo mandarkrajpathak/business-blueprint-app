@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+aiofiles
+python-docx>=0.8.11
+docx
+sentence-transformers
+keybert
+scikit-learn
+fuzzywuzzy
+python-Levenshtein
