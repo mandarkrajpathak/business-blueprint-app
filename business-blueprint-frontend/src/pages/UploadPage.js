@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const MAX_FILE_SIZE_MB = 5;
+const BASE_URL = 'https://business-blueprint-app.onrender.com';
 
 const UploadPage = () => {
   const [projectName, setProjectName] = useState('');
@@ -26,8 +27,6 @@ const UploadPage = () => {
     onDrop,
     accept: { 'application/vnd.openxmlformats-officedocument.wordprocessingml.document': ['.docx'] }
   });
-  
-  const BASE_URL = 'https://business-blueprint-backend.onrender.com'; // Replace with actual Render URL
 
   const handleUpload = async () => {
     if (!file || !projectName || !module) {
@@ -41,7 +40,7 @@ const UploadPage = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://localhost:8000/upload/', {
+      const response = await fetch(`${BASE_URL}/upload/`, {
         method: 'POST',
         body: formData,
       });
@@ -73,7 +72,7 @@ const UploadPage = () => {
 
   const handleExport = async () => {
     try {
-      const response = await fetch('http://localhost:8000/export/', {
+      const response = await fetch(`${BASE_URL}/export/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(uploadResult.blueprint),
@@ -194,7 +193,7 @@ const UploadPage = () => {
         </button>
       )}
 
-      {/* BPMN Viewer (optional) */}
+      {/* BPMN Viewer */}
       {uploadResult?.bpmn_xml && (
         <div style={{ marginTop: '30px' }}>
           <h3 style={{ fontSize: '20px', fontWeight: 'bold' }}>BPMN Diagram</h3>
