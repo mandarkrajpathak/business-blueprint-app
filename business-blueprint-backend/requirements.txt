@@ -9,3 +9,5 @@ keybert
 scikit-learn
 fuzzywuzzy
 python-Levenshtein
+google-generativeai
+python-dotenv
